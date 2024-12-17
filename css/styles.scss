@@ -1,0 +1,352 @@
+// Variables
+$primary-color: #002b5c;
+$secondary-color: #ff6600;
+$background-color: #f4f4f4;
+$text-color: #ffffff;
+$font-family-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font-family-title: 'Impact', Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+// Mixins
+@mixin transition($properties, $duration, $timing-function) {
+  transition: $properties $duration $timing-function;
+}
+
+@mixin hover-scale($scale) {
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin hover-color($color) {
+  &:hover {
+    color: $color;
+  }
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+@mixin margin($margin) {
+  margin: $margin;
+}
+
+/* General */
+body {
+  font-family: "Arial, sans-serif";
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  @include transition(background-color 0.3s ease);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  color: $text-color;
+  padding: 20px;
+  @include transition(background-color 0.3s ease, transform 0.3s ease);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .img-logo {
+    width: 8rem;
+    height: auto;
+    margin-right: 15px;
+    @include transition(transform 0.3s ease);
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+
+    a {
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: $font-family-title;
+      color: $text-color;
+      letter-spacing: 1.5px;
+      @include transition(color 0.3s ease);
+      white-space: nowrap;
+
+      @include hover-color($secondary-color);
+    }
+  }
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-size: 18px;
+      @include transition(color 0.3s ease, transform 0.2s ease);
+      font-family: $font-family-main;
+      white-space: nowrap;
+
+      @include hover-color($secondary-color);
+      @include hover-scale(1.1);
+    }
+  }
+}
+
+/* Títulos */
+h1, h2 {
+  a {
+    color: $primary-color;
+    font-weight: bold;
+    @include transition(color 0.3s ease);
+    text-decoration: none;
+    font-family: $font-family-main;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.721);
+      transform: scale(1.05);
+    }
+  }
+}
+
+h1 {
+  @include font-size(4rem);
+}
+
+h2 {
+  @include font-size(2.5rem);
+}
+
+.titulos {
+  font-family: $font-family-main;
+  color: $primary-color;
+  padding: 20px;
+}
+
+/* Secciones */
+section {
+  background-color: $text-color;
+  border: 1px solid #ddd;
+  padding: 30px;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @include transition(transform 0.3s ease, box-shadow 0.3s ease);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 15px;
+    @include transition(transform 0.3s ease);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: $primary-color;
+  color: $text-color;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  @include transition(background-color 0.3s ease);
+  font-family: $font-family-main;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+
+  img {
+    width: 60px;
+    height: auto;
+    margin-top: 15px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.imagen-principal {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Mobile First: Estilos específicos para dispositivos pequeños */
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .img-logo {
+    width: 5rem;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  p a {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    padding: 20px 30px;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  p a {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 30px;
+    margin: 30px;
+  }
+
+  section img {
+    max-width: 500px;
+  }
+
+  footer {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Para pantallas grandes de escritorio */
+@media (min-width: 1024px) {
+  header {
+    padding: 30px 50px;
+  }
+
+  p {
+    font-size: 2.5rem;
+  }
+
+  p a {
+    font-size: 3rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  section {
+    padding: 40px;
+    margin: 40px;
+  }
+
+  section img {
+    max-width: 600px;
+  }
+
+  footer {
+    padding: 30px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+
