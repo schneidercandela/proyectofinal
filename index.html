@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página principal de Diesel San Gabriel - Expertos en repuestos Scania y Mercedes Benz">
+    <meta name="keywords" content="Diesel San Gabriel, repuestos, camiones, Scania, Mercedes Benz, Olavarría">
     <title>Diesel San Gabriel</title>
-    <!-- Agregar Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <img class="img-logo" src="img/logo-scania.png" alt="Logo">
-        <img class="img-logo" src="img/logo-mercedesbenz.png" alt="Logo">
-        <p><a href="index.html">Diesel San Gabriel</a></p>
+    <!-- Header con fondo semi-transparente -->
+    <header class="header-transparent">
+        <div class="header-content">
+            <div class="logo-container">
+                <img class="img-logo" src="img/logo-scania.png" alt="Logo Scania">
+                <img class="img-logo" src="img/logo-mercedesbenz.png" alt="Logo Mercedes Benz">
+            </div>
+            <p class="brand-name"><a href="index.html">Diesel San Gabriel</a></p>
+        </div>
 
-        <!-- Navbar de Bootstrap con clases para el menú desplegable en mobile -->
-        <nav class="navbar navbar-expand-lg navbar-dark ">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <!-- Botón de menú en mobile -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <!-- Enlaces de navegación -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto"> <!-- ms-auto alinea a la derecha -->
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Inicio</a>
+                            <a class="nav-link active" href="index.html">
+                                <i class="fas fa-home"></i> Inicio
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="repuestos.html">Repuestos</a>
+                            <a class="nav-link" href="repuestos.html">
+                                <i class="fas fa-cogs"></i> Repuestos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="empresa.html">Empresa</a>
+                            <a class="nav-link" href="empresa.html">
+                                <i class="fas fa-building"></i> Empresa
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pagosyenvios.html">Pagos y envíos</a>
+                            <a class="nav-link" href="pagosyenvios.html">
+                                <i class="fas fa-truck"></i> Pagos y envíos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="contacto.html">
+                                <i class="fas fa-envelope"></i> Contacto
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -47,33 +61,116 @@
     </header>
 
     <main>
-        <section>
-            <img class="imagen-principal" src="img/frentedelnegocio.jpg" alt="Imagen principal">
-            <h1 class="titulo-principal"><a href="empresa.html">Diesel San Gabriel</a></h1>
+        <!-- Hero Section con overlay -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <img class="imagen-principal" src="img/frentedelnegocio.jpg" alt="Frente del negocio">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">Diesel San Gabriel</h1>
+                <p class="hero-subtitle">Expertos en repuestos de camiones desde 1978</p>
+                <a href="contacto.html" class="cta-button">Contáctanos</a>
+            </div>
         </section>
-        <section>
-            <img src="img/campanasderueda.png" alt="Repuestos">
-            <h2><a href="repuestos.html">Repuestos</a></h2>
-        </section>
-        <section>
-            <img src="img/frentedelnegocio.jpg" alt="Empresa">
-            <h2><a href="empresa.html">Empresa</a></h2>
-        </section>
-        <section>
-            <img src="img/pago.jpg" alt="Pagos y envíos">
-            <h2><a href="pagosyenvios.html">Pagos y envíos</a></h2>
+
+        <!-- Secciones de servicios con cards -->
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <img src="img/campanasderueda.png" alt="Repuestos">
+                <h2><a href="repuestos.html" class="cardsindex">Repuestos</a></h2>
+                <p>Amplia gama de repuestos originales y alternativos para tu camión</p>
+                <a href="repuestos.html" class="service-link">Ver catálogo <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <img src="img/frentedelnegocio.jpg" alt="Empresa">
+                <h2><a href="empresa.html" class="cardsindex">Empresa</a></h2>
+                <p>Más de 40 años de experiencia en el mercado</p>
+                <a href="empresa.html" class="service-link">Conoce nuestra historia <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <img src="img/pago.jpg" alt="Pagos y envíos">
+                <h2><a href="pagosyenvios.html" class="cardsindex">Pagos y envíos</a></h2>
+                <p>Múltiples opciones de pago y envíos a todo el país</p>
+                <a href="pagosyenvios.html" class="service-link">Ver opciones <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Sección de marcas -->
+        <section class="brands-section" data-aos="fade-up">
+            <h2>Trabajamos con las mejores marcas</h2>
+            <div class="brands-container">
+                <div class="brand-item">
+                    <img src="img/logo-scania.png" alt="Scania">
+                </div>
+                <div class="brand-item">
+                    <img src="img/logo-mercedesbenz.png" alt="Mercedes Benz">
+                </div>
+            </div>
         </section>
     </main>
-    <div class="footer">
-        <footer>
-            <img src="img/logo-scania.png" alt="Logo">
-            <p>Av del Valle 3801 | OLAVARRIA (7400) Buenos Aires | Teléfono: (02284) 42-4278.</p>
-        </footer>
-    </div>
-    
 
-    <!-- Agrego Bootstrap JS y Popper.js (necesarios para el funcionamiento del botón) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Footer Moderno -->
+    <footer class="footer-modern">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/logo-scania.png" alt="Logo Scania" class="footer-logo">
+                <img src="img/logo-mercedesbenz.png" alt="Logo Mercedes Benz" class="footer-logo">
+                <p class="footer-description">
+                    Expertos en repuestos de camiones desde 1978
+                </p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Av del Valle 3801, OLAVARRIA (7400)
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        (02284) 42-4278
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        diesel_sangabriel@yahoo.com.ar
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h3>Horarios</h3>
+                <ul>
+                    <li>Lunes a Viernes: 8:00 - 18:00</li>
+                    <li>Sábados: 8:00 - 13:00</li>
+                    <li>Domingos: Cerrado</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Diesel San Gabriel - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

@@ -1,44 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diesel San Gabriel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="description" content="Historia y trayectoria de Diesel San Gabriel - Más de 40 años de experiencia">
+    <meta name="keywords" content="Empresa, historia, trayectoria, Diesel San Gabriel, Olavarría">
+    <title>Empresa - Diesel San Gabriel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <!-- Logo y título -->
-        <img class="img-logo" src="img/logo-scania.png" alt="Logo">
-        <img class="img-logo" src="img/logo-mercedesbenz.png" alt="Logo">
-        <p><a href="index.html">Diesel San Gabriel</a></p>
+    <header class="header-transparent">
+        <div class="header-content">
+            <div class="logo-container">
+                <img class="img-logo" src="img/logo-scania.png" alt="Logo Scania">
+                <img class="img-logo" src="img/logo-mercedesbenz.png" alt="Logo Mercedes Benz">
+            </div>
+            <p class="brand-name"><a href="index.html">Diesel San Gabriel</a></p>
+        </div>
 
-        <!-- Navbar de Bootstrap -->
-        <nav class="navbar navbar-expand-lg navbar-dark ">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <!-- Botón de menú en dispositivos móviles -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <!-- Enlaces de navegación -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto"> <!-- ms-auto alinea los enlaces a la derecha -->
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Inicio</a>
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home"></i> Inicio
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="repuestos.html">Repuestos</a>
+                            <a class="nav-link" href="repuestos.html">
+                                <i class="fas fa-cogs"></i> Repuestos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="empresa.html">Empresa</a>
+                            <a class="nav-link active" href="empresa.html">
+                                <i class="fas fa-building"></i> Empresa
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pagosyenvios.html">Pagos y envíos</a>
+                            <a class="nav-link" href="pagosyenvios.html">
+                                <i class="fas fa-truck"></i> Pagos y envíos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="contacto.html">
+                                <i class="fas fa-envelope"></i> Contacto
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -47,29 +60,144 @@
     </header>
 
     <main>
-        <section>
-            <h1 class="titulos">Empresa</h1>
-            <img class="imagen-principal" src="img/frentedelnegocio.jpg" alt="Imagen principal">
+        <!-- Hero Section -->
+        <section class="company-hero" data-aos="fade-up">
+            <h1 class="titulos">Nuestra Empresa</h1>
+            <img class="imagen-principal" src="img/frentedelnegocio.jpg" alt="Frente del negocio">
         </section>
-        <section>
-            <p>Diesel San Gabriel es una empresa (S.A.) reconocida por su amplia trayectoria en el mercado. Desde el año 1978 cumpliendo con todas sus expectativas.</p>
-            <p>Busca el concepto de brindar a sus clientes algo más que la venta de productos, la mejor atención y servicios posible.</p>
-            <p>Ubicado en el centro de la provincia de Buenos Aires, más precisamente en la ciudad de Olavarría, Pcia. de Buenos Aires, República Argentina, cuya dirección exacta es: Avenida Del Valle 3801, esquina Laprida.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.4062164294833!2d-60.32164452430738!3d-36.904550872217584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95944433199b50a9%3A0x216271b56804cc3e!2sAv.%20del%20Valle%203801%2C%20B7400%20Olavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1732630969791!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <!-- Historia y Descripción -->
+        <section class="company-info" data-aos="fade-up">
+            <div class="container">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h2>Nuestra Historia</h2>
+                    <p>Diesel San Gabriel es una empresa (S.A.) reconocida por su amplia trayectoria en el mercado. Desde el año 1978 cumpliendo con todas sus expectativas.</p>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h2>Nuestro Compromiso</h2>
+                    <p>Busca el concepto de brindar a sus clientes algo más que la venta de productos, la mejor atención y servicios posible.</p>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h2>Ubicación Estratégica</h2>
+                    <p>Ubicado en el centro de la provincia de Buenos Aires, más precisamente en la ciudad de Olavarría, Pcia. de Buenos Aires, República Argentina, cuya dirección exacta es: Avenida Del Valle 3801, esquina Laprida.</p>
+                </div>
+            </div>
         </section>
-        <section>
-            <!-- Puedes agregar un mapa aquí si es necesario -->
+
+        <!-- Timeline de Historia -->
+        <section class="timeline-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">Nuestra Trayectoria</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <h3>1978</h3>
+                            <p>Fundación de Diesel San Gabriel</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <h3>1990</h3>
+                            <p>Expansión del catálogo de productos</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <h3>2000</h3>
+                            <p>Modernización de instalaciones</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <h3>Actualidad</h3>
+                            <p>Líder en repuestos de camiones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa con diseño mejorado -->
+        <section class="map-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">Nuestra Ubicación</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.4062164294833!2d-60.32164452430738!3d-36.904550872217584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95944433199b50a9%3A0x216271b56804cc3e!2sAv.%20del%20Valle%203801%2C%20B7400%20Olavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1732630969791!5m2!1ses!2sar"
+                        width="100%"
+                        height="450"
+                        style="border:0; border-radius: 10px;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
         </section>
     </main>
-    <div class="footer">
-        <footer>
-            <img src="img/logo-scania.png" alt="Logo">
-            <p>Av del Valle 3801 | OLAVARRIA (7400) Buenos Aires | Teléfono: (02284) 42-4278.</p>
-        </footer>
-    </div>
 
+    <!-- Footer Moderno -->
+    <footer class="footer-modern">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/logo-scania.png" alt="Logo Scania" class="footer-logo">
+                <img src="img/logo-mercedesbenz.png" alt="Logo Mercedes Benz" class="footer-logo">
+                <p class="footer-description">
+                    Expertos en repuestos de camiones desde 1978
+                </p>
+            </div>
 
-    <!-- Scripts de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Av del Valle 3801, OLAVARRIA (7400)
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        (02284) 42-4278
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        diesel_sangabriel@yahoo.com.ar
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h3>Horarios</h3>
+                <ul>
+                    <li>Lunes a Viernes: 8:00 - 18:00</li>
+                    <li>Sábados: 8:00 - 13:00</li>
+                    <li>Domingos: Cerrado</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Diesel San Gabriel - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

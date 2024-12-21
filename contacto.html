@@ -1,45 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diesel San Gabriel</title>
-    <!-- Agregar Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Información de contacto y ubicación de Diesel San Gabriel">
+    <meta name="keywords" content="Contacto, teléfono, email, ubicación, Diesel San Gabriel, Olavarría">
+    <title>Contacto - Diesel San Gabriel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <!-- Logo y título -->
-        <img class="img-logo" src="img/logo-scania.png" alt="Logo">
-        <img class="img-logo" src="img/logo-mercedesbenz.png" alt="Logo">
-        <p><a href="index.html">Diesel San Gabriel</a></p>
+    <header class="header-transparent">
+        <div class="header-content">
+            <div class="logo-container">
+                <img class="img-logo" src="img/logo-scania.png" alt="Logo Scania">
+                <img class="img-logo" src="img/logo-mercedesbenz.png" alt="Logo Mercedes Benz">
+            </div>
+            <p class="brand-name"><a href="index.html">Diesel San Gabriel</a></p>
+        </div>
 
-        <!-- Navbar de Bootstrap -->
-        <nav class="navbar navbar-expand-lg navbar-dark >
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <!-- Botón de menú en dispositivos móviles -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <!-- Enlaces de navegación -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto"> <!-- ms-auto alinea a la derecha -->
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Inicio</a>
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home"></i> Inicio
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="repuestos.html">Repuestos</a>
+                            <a class="nav-link" href="repuestos.html">
+                                <i class="fas fa-cogs"></i> Repuestos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="empresa.html">Empresa</a>
+                            <a class="nav-link" href="empresa.html">
+                                <i class="fas fa-building"></i> Empresa
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pagosyenvios.html">Pagos y envíos</a>
+                            <a class="nav-link" href="pagosyenvios.html">
+                                <i class="fas fa-truck"></i> Pagos y envíos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link active" href="contacto.html">
+                                <i class="fas fa-envelope"></i> Contacto
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -48,26 +60,134 @@
     </header>
 
     <main>
-        <section>
-            <h1 class="titulos">Contacto</h1>
-            <img src="img/telefono.jpg" alt="">
+        <!-- Hero Section -->
+        <section class="contact-hero" data-aos="fade-up">
+            <div class="container">
+                <h1 class="titulos">Contacto</h1>
+                <div class="container-image">
+                    <img src="img/telefono.jpg" alt="Contacto" class="hero-image">
+                </div>
+                
+            </div>
         </section>
-        <section>
-            <p>Teléfonos: (02284) 424278 - (02284) 425962 - (02284) 662975 (de emergencia)</p>
-            <p>Mail: diesel_sangabriel@yahoo.com.ar</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.4062164294833!2d-60.32164452430738!3d-36.904550872217584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95944433199b50a9%3A0x216271b56804cc3e!2sAv.%20del%20Valle%203801%2C%20B7400%20Olavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1732630969791!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <!-- Información de Contacto -->
+        <section class="contact-info-section" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <!-- Tarjetas de Contacto -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Teléfonos</h3>
+                            <ul class="contact-list">
+                                <li><a href="tel:02284424278">(02284) 424278</a></li>
+                                <li><a href="tel:02284425962">(02284) 425962</a></li>
+                                <li><a href="tel:02284662975">(02284) 662975</a> <span class="emergency-badge">Emergencias</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Correo Electrónico</h3>
+                            <a href="mailto:diesel_sangabriel@yahoo.com.ar" class="contact-email">
+                                diesel_sangabriel@yahoo.com.ar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Horarios de Atención</h3>
+                            <ul class="schedule-list">
+                                <li><span class="day">Lunes a Viernes:</span> 8:00 - 18:00</li>
+                                <li><span class="day">Sábados:</span> 8:00 - 13:00</li>
+                                <li><span class="day">Domingos:</span> Cerrado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mapa -->
+        <section class="map-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Nuestra Ubicación</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.4062164294833!2d-60.32164452430738!3d-36.904550872217584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95944433199b50a9%3A0x216271b56804cc3e!2sAv.%20del%20Valle%203801%2C%20B7400%20Olavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1732630969791!5m2!1ses!2sar"
+                        width="100%"
+                        height="450"
+                        style="border:0; border-radius: 10px;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
         </section>
     </main>
-    <div class="footer">
-         <footer>
-            <img src="img/logo-scania.png" alt="Logo">
-            <p>Av del Valle 3801 | OLAVARRIA (7400) Buenos Aires | Teléfono: (02284) 42-4278.</p>
-        </footer> 
-    </div>
-  
 
-    <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Footer Moderno -->
+    <footer class="footer-modern">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/logo-scania.png" alt="Logo Scania" class="footer-logo">
+                <img src="img/logo-mercedesbenz.png" alt="Logo Mercedes Benz" class="footer-logo">
+                <p class="footer-description">
+                    Expertos en repuestos de camiones desde 1978
+                </p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Av del Valle 3801, OLAVARRIA (7400)
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        (02284) 42-4278
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        diesel_sangabriel@yahoo.com.ar
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h3>Horarios</h3>
+                <ul>
+                    <li>Lunes a Viernes: 8:00 - 18:00</li>
+                    <li>Sábados: 8:00 - 13:00</li>
+                    <li>Domingos: Cerrado</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Diesel San Gabriel - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>
